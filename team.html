@@ -445,7 +445,6 @@ footer a:hover{color:#fff}
 }
 
 
-/* ===== INTERACTIVE DESIGN LAYER ===== */
 body{cursor:default}
 .cursor-glow{
   position:fixed;width:280px;height:280px;border-radius:50%;
@@ -612,7 +611,6 @@ body{cursor:default}
 }
 
 
-/* ===== PIZZAZZ / SHOWCASE LAYER ===== */
 .hero .eyebrow{animation:heroIn .8s .1s both}
 .hero h1{animation:heroIn .9s .18s both}
 .hero-copy{animation:heroIn .9s .3s both}
@@ -1641,6 +1639,74 @@ body.full-team-page .team-section{
   .jpcs-support-grid{grid-template-columns:1fr;gap:14px;}
   .officer-view{opacity:1;transform:none;}
 }
+/* ===== UNIFORM OFFICER PHOTO SIZING ===== */
+.officer-image-button{
+  width:100%;
+  aspect-ratio:1 / 1;
+  height:auto;
+  max-width:100%;
+  margin:0;
+}
+.officer-image-button img{
+  width:100% !important;
+  height:100% !important;
+  aspect-ratio:1 / 1 !important;
+  object-fit:cover !important;
+  display:block;
+}
+
+.jpcs-leadership-grid .officer-image-button{
+  overflow:hidden;
+}
+.jpcs-leadership-grid .officer-image-button img{
+  transform:scale(1.16);
+  transform-origin:center center;
+}
+.jpcs-leadership-grid .officer-image-button:hover img{
+  transform:scale(1.20);
+}
+
+@media (max-width:560px){
+  .officer-grid,
+  .jpcs-leadership-grid,
+  .jpcs-support-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .officer-card{
+    width:min(100%, 340px);
+    margin:0 auto;
+  }
+
+  .officer-image-button,
+  .jpcs-leadership-grid .officer-image-button,
+  .jpcs-support-grid .officer-image-button{
+    width:100% !important;
+    max-width:none !important;
+    height:auto !important;
+    aspect-ratio:1 / 1 !important;
+    margin:0;
+  }
+
+  .officer-image-button img,
+  .jpcs-leadership-grid .officer-image-button img,
+  .jpcs-support-grid .officer-image-button img{
+    width:100% !important;
+    height:100% !important;
+    aspect-ratio:1 / 1 !important;
+    object-fit:cover !important;
+  }
+
+  .officer-meta{
+    padding:14px 10px 17px;
+  }
+
+  .officer-meta h3{
+    font-size:17px;
+  }
+}
+
 </style>
 </head>
 <body class="full-team-page">
@@ -1651,7 +1717,7 @@ body.full-team-page .team-section{
   <div><div class="brand-title">JPCS — SPCBA</div><div class="brand-sub">JUNIOR PHILIPPINE COMPUTER SOCIETY</div></div>
 </a>
 <div class="navlinks" id="teamNavLinks">
-  <a href="index.html">Landing Page</a>
+  <a href="index.html">Home</a>
   <a class="active" href="team.html">Full Team</a>
   <a class="apply" href="https://www.facebook.com/JPCSSPCBA" target="_blank">Follow JPCS ↗</a>
 </div>
@@ -2149,7 +2215,7 @@ body.full-team-page .team-section{
     </div>
     <div>
       <div class="footer-heading">NAVIGATION</div>
-      <ul><li><a href="index.html">Landing Page</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#events">Events</a></li></ul>
+      <ul><li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#events">Events</a></li></ul>
     </div>
     <div>
       <div class="footer-heading">LINKS</div>
